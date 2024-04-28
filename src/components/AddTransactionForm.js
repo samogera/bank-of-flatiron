@@ -19,6 +19,7 @@ function AddTransactionForm({ transactions, setTransactions }) {
 
   function handleSubmit(e) {
     e.preventDefault();
+    // Add form validation here if needed
     fetch("http://localhost:8001/transactions", {
       method: "POST",
       headers: {
@@ -28,7 +29,7 @@ function AddTransactionForm({ transactions, setTransactions }) {
     })
       .then((result) => {
         if (!result.ok) {
-          throw new Error("Failed to add transaction");
+          throw new Error("Failed to add transaction. Please try again later.");
         }
         return result.json();
       })
@@ -41,6 +42,7 @@ function AddTransactionForm({ transactions, setTransactions }) {
           category: "",
           amount: 0,
         });
+        setError(null); // Clear any previous errors
       })
       .catch((error) => {
         setError(error.message);
@@ -49,7 +51,7 @@ function AddTransactionForm({ transactions, setTransactions }) {
 
   return (
     <div className="ui segment">
-      {error && <div>Error: {error}</div>}
+      {error && <div className="ui negative message">{error}</div>}
       <form className="ui form" onSubmit={handleSubmit}>
         <div className="inline fields">
           <input
@@ -57,6 +59,7 @@ function AddTransactionForm({ transactions, setTransactions }) {
             name="date"
             value={formData.date}
             onChange={handleOnChange}
+            required // Add required attribute for form validation
           />
           <input
             type="text"
@@ -64,6 +67,7 @@ function AddTransactionForm({ transactions, setTransactions }) {
             placeholder="Description"
             value={formData.description}
             onChange={handleOnChange}
+            required
           />
           <input
             type="text"
@@ -71,6 +75,7 @@ function AddTransactionForm({ transactions, setTransactions }) {
             placeholder="Category"
             value={formData.category}
             onChange={handleOnChange}
+            required
           />
           <input
             type="number"
@@ -79,6 +84,7 @@ function AddTransactionForm({ transactions, setTransactions }) {
             step="0.01"
             value={formData.amount}
             onChange={handleOnChange}
+            required
           />
         </div>
         <button className="ui button" type="submit">
