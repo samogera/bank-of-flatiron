@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/bbank-of-flatiron/static/css/main.31f2b759.css",
-    "main.js": "/bbank-of-flatiron/static/js/main.b1e473de.js",
+    "main.js": "/bbank-of-flatiron/static/js/main.e2ba0313.js",
     "static/media/brand-icons.svg": "/bbank-of-flatiron/static/media/brand-icons.6729d29753e000c17489.svg",
     "static/media/icons.svg": "/bbank-of-flatiron/static/media/icons.62d9dae4e0040e81c980.svg",
     "static/media/outline-icons.svg": "/bbank-of-flatiron/static/media/outline-icons.9c4845b4b41ef40a22fa.svg",
@@ -20,10 +20,10 @@
     "static/media/outline-icons.woff2": "/bbank-of-flatiron/static/media/outline-icons.687a4990ea22bb1a49d4.woff2",
     "index.html": "/bbank-of-flatiron/index.html",
     "main.31f2b759.css.map": "/bbank-of-flatiron/static/css/main.31f2b759.css.map",
-    "main.b1e473de.js.map": "/bbank-of-flatiron/static/js/main.b1e473de.js.map"
+    "main.e2ba0313.js.map": "/bbank-of-flatiron/static/js/main.e2ba0313.js.map"
   },
   "entrypoints": [
     "static/css/main.31f2b759.css",
-    "static/js/main.b1e473de.js"
+    "static/js/main.e2ba0313.js"
   ]
 }
