@@ -1,4 +1,4 @@
-# (Royal Bank of Flatiron)
+# Royal Bank of Flatiron
 
 #### Date, 2024/04/28
 
@@ -9,7 +9,7 @@ This project is a React application that allows users to manage their bank trans
 To get started with the Bank of Flatiron project, follow these steps:
 1.Clone this repository to your local machine
 
-git clone https://github.com/your-username/bank-of-flatiron.git
+git clone https://github.com/samogera/bank-of-flatiron
 
 2. Navigate to the project directory
 
