@@ -10,7 +10,7 @@ function SearchTransaction({ searchParam, onTransactionSearch }) {
         type="text"
         name="searchParam"
         value={searchParam}
-        placeholder="Search your recent transactions"
+        placeholder="Search your transactions"
         onChange={handleTransactionSearch}
       />
       <i className="circular search link icon"></i>

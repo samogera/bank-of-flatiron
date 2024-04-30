@@ -20,7 +20,7 @@ function Transaction({ date, description, category, amount, id, transactions, se
       <td>{description}</td>
       <td>{category}</td>
       <td>{amount}</td>
-      <td><button className="ui button" onClick={handleDeleteTransaction}>Delete this transaction</button></td>
+      <td><button className="ui button" onClick={handleDeleteTransaction}>Delete</button></td>
     </tr>
   );
 }

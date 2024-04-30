@@ -22,18 +22,18 @@
       "amount": "-400"
     },
     {
-      "id": "a39d",
-      "date": "2024-04-24",
-      "description": "Fees",
-      "category": "Amenities",
-      "amount": "-1000"
-    },
-    {
       "id": "fbc2",
       "date": "2024-04-29",
       "description": "Bills",
       "category": "Amenities",
       "amount": "-1500"
+    },
+    {
+      "id": "5c92",
+      "date": "2024-05-01",
+      "description": "Rent",
+      "category": "Amenities",
+      "amount": "-1000"
     }
   ]
 }
