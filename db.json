@@ -69,6 +69,13 @@
       "description": "Side-hustle",
       "category": "Income ",
       "amount": "800"
+    },
+    {
+      "id": "ed96",
+      "date": "2024-06-10",
+      "description": "Fees",
+      "category": "Amenities",
+      "amount": "-1500"
     }
   ]
 }
