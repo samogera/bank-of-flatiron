@@ -4,6 +4,7 @@ function SearchTransaction({ searchParam, onTransactionSearch }) {
   function handleTransactionSearch(evt) {
     onTransactionSearch(evt.target.value);
   }
+
   return (
     <div className="ui large fluid icon input">
       <input
@@ -11,7 +12,7 @@ function SearchTransaction({ searchParam, onTransactionSearch }) {
         name="searchParam"
         value={searchParam}
         placeholder="Search your transactions"
-        onChange={handleTransactionSearch}
+        onChange={handleTransactionSearch} // Updated to call handleTransactionSearch on every change
       />
       <i className="circular search link icon"></i>
     </div>

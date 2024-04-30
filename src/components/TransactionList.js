@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function TransactionList() {
+function TransactionList({ searchParam }) {
   const [transactions, setTransactions] = useState([]);
 
   useEffect(() => {
@@ -16,6 +16,11 @@ function TransactionList() {
     setTransactions(updatedTransactions);
   };
 
+  // Filter transactions based on searchParam
+  const filteredTransactions = transactions.filter(transaction =>
+    transaction.description.toLowerCase().includes(searchParam.toLowerCase())
+  );
+
   return (
     <div>
       <h2>Your Transactions</h2>
@@ -30,7 +35,7 @@ function TransactionList() {
           </tr>
         </thead>
         <tbody>
-          {transactions.map(transaction => (
+          {filteredTransactions.map(transaction => (
             <tr key={transaction.id}>
               <td>{transaction.date}</td>
               <td>{transaction.description}</td>
