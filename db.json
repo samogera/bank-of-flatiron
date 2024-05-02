@@ -83,6 +83,13 @@
       "description": "Concert",
       "category": "Entertainment",
       "amount": "-300"
+    },
+    {
+      "id": "8f21",
+      "date": "2024-06-06",
+      "description": "Movies",
+      "category": "Entertainment",
+      "amount": "-10"
     }
   ]
 }

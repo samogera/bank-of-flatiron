@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function AddTransactionForm({ transactions, setTransactions }) {
   const [formData, setFormData] = useState({
@@ -8,6 +8,13 @@ function AddTransactionForm({ transactions, setTransactions }) {
     amount: 0,
   });
   const [error, setError] = useState(null);
+
+  useEffect(() => {
+    fetch("http://localhost:8001/transactions")
+      .then((response) => response.json())
+      .then((data) => setTransactions(data))
+      .catch((error) => setError(error.message));
+  }, []);
 
   function handleOnChange(e) {
     const { name, value } = e.target;
@@ -19,7 +26,6 @@ function AddTransactionForm({ transactions, setTransactions }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    // Add form validation here if needed
     fetch("http://localhost:8001/transactions", {
       method: "POST",
       headers: {
@@ -42,7 +48,7 @@ function AddTransactionForm({ transactions, setTransactions }) {
           category: "",
           amount: 0,
         });
-        setError(null); // Clear any previous errors
+        setError(null);
       })
       .catch((error) => {
         setError(error.message);
@@ -59,7 +65,7 @@ function AddTransactionForm({ transactions, setTransactions }) {
             name="date"
             value={formData.date}
             onChange={handleOnChange}
-            required // Add required attribute for form validation
+            required
           />
           <input
             type="text"
