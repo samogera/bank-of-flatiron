@@ -90,6 +90,34 @@
       "description": "Movies",
       "category": "Entertainment",
       "amount": "-10"
+    },
+    {
+      "id": "01b2",
+      "date": "2024-05-14",
+      "description": "Movies",
+      "category": "Entertainment",
+      "amount": "-200"
+    },
+    {
+      "id": "1065",
+      "date": "2024-06-07",
+      "description": "Bills",
+      "category": "Amenities",
+      "amount": "-1000"
+    },
+    {
+      "id": "4591",
+      "date": "2024-05-06",
+      "description": "Food",
+      "category": "Groceries",
+      "amount": "-2000"
+    },
+    {
+      "id": "3c8f",
+      "date": "2024-05-23",
+      "description": "Bills",
+      "category": "Amenities",
+      "amount": "-10"
     }
   ]
 }

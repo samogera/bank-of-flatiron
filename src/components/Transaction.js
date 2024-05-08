@@ -1,17 +1,18 @@
 import React from "react";
 
-function Transaction({ date, description, category, amount, id, transactions, setTransactions }) {
-  function handleDeleteTransaction() {
-    fetch(`http://localhost:8001/transactions/${id}`, {
-      method: "DELETE"
+function Transaction({id, date, description, category, amount}) {
+  function handleDelete(event){
+    fetch(`${process.env.REACT_APP_API_URL}/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      }
     })
-      .then((r) => r.json())
-      .then(() => {
-        const availableTransactions = transactions.filter((transaction) => {
-          return transaction.id !== id
-        })
-        setTransactions(availableTransactions)
-      })
+    .then(result => result.json())
+    .then(alert("Item deleted!"))
+    
+
   }
 
   return (
@@ -20,7 +21,7 @@ function Transaction({ date, description, category, amount, id, transactions, se
       <td>{description}</td>
       <td>{category}</td>
       <td>{amount}</td>
-      <td><button className="ui button" onClick={handleDeleteTransaction}>Delete</button></td>
+      <td>{<button onClick={handleDelete}>Delete</button>}</td>
     </tr>
   );
 }
